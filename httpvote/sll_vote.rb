@@ -50,7 +50,7 @@ Net::HTTP.start(url.host, url.port) { | http|
   postreq['Cookie'] = getres['set-cookie']
 
 
-  postreq.set_form_data({'toupiao1'=>'93', 'toupiao'=>'49', 'Submit'=>'提交投票'})
+  postreq.set_form_data({'toupiao1'=>'95', 'toupiao'=>'49', 'Submit'=>'提交投票'})
 
   postreq.content_length = postreq.body.size
 
@@ -71,7 +71,7 @@ Net::HTTP.start(url.host, url.port) { | http|
  end
 }
 end
-rescue => err
+rescue Exception => err
   p err
   sleep_time = rand()
   p "sleep #{sleep_time} seconds"
